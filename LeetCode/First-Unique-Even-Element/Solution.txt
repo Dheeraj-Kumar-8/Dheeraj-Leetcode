@@ -1,0 +1,36 @@
+1class Solution {
+2    public int firstUniqueEven(int[] nums) {
+3
+4        int Dheeraj = -1;
+5    int Dee=nums.length;
+6        for(int i=0;i<Dee;i++)
+7            {
+8                int noble = 0;
+9            for(int j=i+1;j<Dee;j++)
+10
+11                  if(nums[i]==nums[j])
+12                {
+13              noble = 1;
+14                 break;
+15            }
+16             for(int j=0;j<i;j++)
+17                 {
+18                    if(nums[i] == nums[j])
+19                     {
+20                    noble = 1;
+21                     break;
+22                     }
+23                 }
+24                
+25             if(noble == 0 && nums[i]%2==0)
+26        {
+27          Dheeraj=nums[i];
+28            break;
+29        }
+30                
+31     }
+32       
+33             return Dheeraj;
+34        
+35    }
+36}
