@@ -1,0 +1,24 @@
+1class Solution {
+2    public int maxValidPairSum(int[] nums, int k) {
+3
+4        int[] array = nums;
+5
+6        int larg = array[0];
+7        int maxi = Integer.MIN_VALUE;
+8
+9        for (int id = k; id < array.length; id++) {
+10
+11            if (array[id-k] > larg) {
+12                larg = array[id - k];
+13            }
+14
+15            int tot = larg + array[id];
+16
+17            if (tot > maxi) {
+18                maxi = tot;
+19            }
+20        }
+21
+22        return maxi;
+23    }
+24}
