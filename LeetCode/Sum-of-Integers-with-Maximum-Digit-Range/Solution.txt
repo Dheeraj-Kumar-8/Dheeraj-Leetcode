@@ -1,0 +1,33 @@
+1class Solution {
+2    public int maxDigitRange(int[] nums) {
+3        int maxim = -1;
+4        int suman = 0;
+5
+6        for (int n : nums) {
+7            int x = n;
+8            int lar = 0;
+9            int smal = 9;
+10
+11            while (x > 0) {
+12                int dim = x % 10;
+13                if (dim > lar) 
+14                    lar = dim;
+15                if (dim < smal) 
+16                    smal = dim;
+17                x /= 10;
+18            }
+19        int differ = lar - smal;
+20        if (differ > maxim) 
+21        {
+22                maxim = differ;
+23            suman = n;
+24        } 
+25        else if (differ == maxim)
+26        {
+27            suman += n;
+28        }
+29        
+30    }
+31        return suman;
+32}
+33}
