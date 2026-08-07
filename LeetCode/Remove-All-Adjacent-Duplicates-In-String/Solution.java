@@ -1,7 +1,7 @@
 1class Solution {
 2    public String removeDuplicates(String s) {
 3
-4        Stack<Character> stk = new Stack<>();   // Changed: Use Character generic
+4        Stack<Character> stk = new Stack<>();   
 5        String res = "";
 6
 7        for(char c : s.toCharArray())
@@ -10,9 +10,9 @@
 10
 11            if(stk.isEmpty())
 12            {
-13                stk.push(ch);                   // Changed: Push when stack is empty
+13                stk.push(ch);                   
 14            }
-15            else                                // Changed: Added else block
+15            else                                
 16            {
 17                if(stk.peek() == ch)
 18                {
