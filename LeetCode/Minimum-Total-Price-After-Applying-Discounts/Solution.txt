@@ -1,0 +1,21 @@
+1class Solution {
+2    public double minPrice(int[] prices, int[] discounts) {
+3        int n = prices.length;
+4        int m = discounts.length;
+5        int i = n-1;
+6        int j = m -1;
+7        Arrays.sort(prices);
+8        Arrays.sort(discounts);
+9        double sol = 0;
+10        int min = Math.min(n, m);
+11        for(int d=0;d<min;d++)
+12            {
+13                sol+=(prices[n - 1 - d] * (100.0 - discounts[m - 1 - d])) / 100.0;
+14            }
+15        for (int k = 0; k < n - min; k++) 
+16        {
+17            sol += prices[k];
+18        }
+19        return sol;
+20    }
+21}
