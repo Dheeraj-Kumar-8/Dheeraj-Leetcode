@@ -1,0 +1,15 @@
+1class Solution {
+2    public int elevatorRequests(int n, int[] requests) {
+3
+4        int base = 0;
+5        int sec = 0;
+6        for(int i : requests)
+7            {
+8                
+9                sec += Math.abs(i - base);
+10                base = i;
+11            }
+12        return sec;
+13        
+14    }
+15}
