@@ -1,9 +1,9 @@
-Set<Integer> result = new HashSet<>();
-for(int num1 : nums1) {
-    for(int num2 : nums2) {
-        if(num1 == num2) {
-            result.add(num1);
-            break;
-        }
-    }
-}
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        set1 = set(nums1)
+        ans = []
+        for i in nums2:
+            if i in set1:
+                ans.append(i)
+                set1.remove(i)
+        return ans
