@@ -1,11 +1,8 @@
 1class Solution {
 2    public int addDigits(int num) {
-3        if(num>=0 && num<=9)
-4        {
-5            return num;
-6        }
-7        return 1+(num-1)%9;
-8       
-9        
-10    }
-11}
+3        while (num > 9) {
+4            num = num / 10 + num % 10;
+5        }
+6        return num;
+7    }
+8}
