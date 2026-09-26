@@ -1,0 +1,24 @@
+1class Solution {
+2    public int minQueenMoves(int[] source, int[] target) {
+3
+4        int starti = source[0];
+5        int startj = source[1];
+6
+7        int targeti = target[0];
+8        int targetj = target[1];
+9
+10        if(starti == targeti && startj == targetj)
+11        {
+12            return 0;
+13        }
+14        if(starti == targeti || startj == targetj)
+15        {
+16            return 1;
+17        }
+18        if(Math.abs(starti - targeti) == Math.abs(startj - targetj))
+19        {
+20            return 1;
+21        }
+22        return 2;
+23    }
+24}
