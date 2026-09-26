@@ -1,0 +1,19 @@
+1class Solution {
+2    public boolean canTransform(int[] source, int[] target) {
+3
+4        long tot_source = 0;
+5        long tot_target = 0;
+6
+7        for(int x=source.length-1;x>=0;x--)
+8        {
+9            tot_source+=source[x];
+10        }
+11        for(int y=target.length-1;y>=0;y--)
+12        {
+13            tot_target+=target[y];
+14        }
+15
+16        boolean result = (tot_source == tot_target);
+17        return result;
+18    }
+19}
